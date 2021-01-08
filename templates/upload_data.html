@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MATSOL</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+    <link rel = "icon" href =  "static/css/logo.png" type = "image/x-icon">
+    <style>
+        input[type=file]{
+            position: absolute;
+            top: 50%;
+            width: 20%;
+            left: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transform: translate(-50%,-50%);
+        }
+        input[type=submit] {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            width: 20%;
+            transform: translate(-50%,-50%)
+        }
+        .time_table_btn{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid #fff;
+            padding: 10px 50px;
+            text-decoration: none;
+            transition: 0.6s ease;
+        }
+
+    </style> 
+</head>
+<body style="background-color: #262626;">
+        <div class="main">
+		<div class="logo">
+                <img src="static/css/logo.png">
+        </div>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{url_for('products')}}">Products</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div>
+                <form class="form-upload", form method=post enctype=multipart/form-data>
+                <input type="file" id="image", name="image"  required autofocus>
+                <button class="time_table_btn" type="submit">Time Table</button>
+            </form>
+            </div>
+        </div>
+        
+    
+</body>
+</html>

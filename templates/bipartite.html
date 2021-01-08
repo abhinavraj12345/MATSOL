@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MATSOL</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+    <link rel = "icon" href =  "static/css/logo.png" type = "image/x-icon"> 
+    <style></style>
+</head>
+<body style="background-color:#262626;">
+        <div class="main">
+		<div class="logo">
+                <img src="static/css/logo.png">
+        </div>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{url_for('products')}}">Products</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="network_img">
+                <img src="{{url_for('static',filename='image_2.jpg')}}"/>
+            </div>
+            <div class="next_button">
+                <a href="{{url_for('projected')}}" class="next_btn">NEXT</a>
+            </div>
+</body>
+</html>

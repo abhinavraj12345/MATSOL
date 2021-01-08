@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MATSOL</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/style.css')}}">
+	<link rel = "icon" href =  "static/css/logo.png" type = "image/x-icon"> 
+</head>
+<body style="background-color: #262626;">
+        <div class="main">
+		<div class="logo">
+                <img src="static/css/logo.png">
+        </div>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li class="active"><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="product_img">
+                <img src="static/css/timetable.png"/>
+            </div>
+        </div>
+        
+        <div class="pro_button">
+            <a href="{{url_for('upload_data')}}" class="pro_btn">MAKE EXAM TIME TABLE</a>
+        </div>
+    
+</body>
+</html>
