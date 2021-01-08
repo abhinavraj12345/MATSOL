@@ -1,1 +1,1 @@
-worker: python trial_main.py
+web gunicorn trial_main:app
