@@ -57,7 +57,7 @@ class ExamTimeTable:
         plt.legend(handles=legend_elements, loc='lower right' )
         nx.draw(self.n_graph, with_labels=True, node_color=color_seq)
         #filename_1 = tempfile.NamedTemporaryFile().name + ".jpg"
-        fig.savefig('./static/image_1.jpg',dpi=300, bbox_inches='tight')
+        fig.savefig('./static/image_1.png',dpi=300, bbox_inches='tight')
 
         #bipartite graph
         l, r = nx.bipartite.sets(self.n_graph)
@@ -69,7 +69,7 @@ class ExamTimeTable:
         plt.legend(handles=legend_elements, loc='upper right' )
         nx.draw(self.n_graph, pos=pos,with_labels=True,node_color=color_seq)
         #filename_2 = tempfile.NamedTemporaryFile().name + ".jpg"
-        fig.savefig('./static/image_2.jpg',dpi=300, bbox_inches='tight')
+        fig.savefig('./static/image_2.png',dpi=300, bbox_inches='tight')
 
         
     def graph_coloring(self,plottitle):
@@ -91,7 +91,7 @@ class ExamTimeTable:
         nx.draw_networkx_edges(G,pos,width=1.0,alpha=0.5)
         nx.draw_networkx_labels(G,pos,labels=subject_labels,font_size=20)
         #filename_3 = tempfile.NamedTemporaryFile().name + ".jpg"
-        fig.savefig('./static/image_3.jpg',dpi=300, bbox_inches='tight')
+        fig.savefig('./static/image_3.png',dpi=300, bbox_inches='tight')
         return coloring
         
         
