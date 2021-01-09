@@ -7,6 +7,7 @@ Created on Wed Jan  6 12:22:06 2021
 
 import pandas as pd
 import os
+import tempfile
 
 from examtimetable import ExamTimeTable
 
@@ -47,8 +48,8 @@ def upload_data():
     if request.method == 'POST':
         image_file = request.files['image']
         if image_file:
-            image_location = os.path.join(UPLOAD_FOLDER,image_file.filename)
-            image_file.save(image_location)
+            #image_location = os.path.join(UPLOAD_FOLDER,image_file.filename)
+            image_file.save(tempfile.NamedTemporaryFile().name + ".csv")
             time_table(pd.read_csv(image_location),image_file.filename)
             try:
                 os.remove(image_location)
