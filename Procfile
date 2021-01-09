@@ -1,1 +1,1 @@
-web: gunicorn trial_main:app
+web: gunicorn trial_main:app --preload
