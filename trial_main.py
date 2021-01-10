@@ -51,8 +51,8 @@ def upload_data():
             #image_location = os.path.join(UPLOAD_FOLDER,image_file.filename)
             image_location = tempfile.NamedTemporaryFile().name + ".csv"
             image_file.save(image_location)
-            time_table(pd.read_csv(image_location),image_file.filename)
             try:
+                time_table(pd.read_csv(image_location),image_file.filename)
                 os.remove(image_location)
             except Exception as exc:
                 pass
